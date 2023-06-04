@@ -1,3 +1,4 @@
+import data from "../texts.json"
 import {Link, useLocation, useNavigate} from "react-router-dom";
 
 function Navigation() {
@@ -5,8 +6,11 @@ function Navigation() {
   const navigate = useNavigate();
 
   const links = [
-    { label: "Domov", path: "/" },
-    { label: "Dary", path: "/donations" }
+    { label: data.today, path: "/" },
+    { label: data.joyful.title, path: "/radostny" },
+    { label: data.sorrowful.title, path: "/bolestny" },
+    { label: data.glorious.title, path: "/slavny" },
+    { label: data.luminous.title, path: "/svetla" }
   ];
 
   const renderedLinks = links.map((link) => {
@@ -19,7 +23,7 @@ function Navigation() {
 
   return (
     <nav>
-      NAVIGACE
+      <div className="links">{renderedLinks}</div>
     </nav>
   );
 }

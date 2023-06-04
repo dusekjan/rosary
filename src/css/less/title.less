@@ -1,0 +1,25 @@
+.title {
+  .title-stripe;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: @title-height;
+
+  .adjective {
+    font-weight: bold;
+  }
+
+  span {
+    padding: 0 34px;
+  }
+
+  &:before {
+    margin: auto;
+    width: 80%;
+    left: calc((100% - $width) / 2);
+    border-top: solid @title-stripe-width @grey-1;
+    top: calc(calc((@title-height / 2) - calc(@title-stripe-width / 4)));
+  }
+}

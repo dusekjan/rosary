@@ -1,0 +1,44 @@
+.prayer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  border-left: @chain-width solid @grey-1;
+  padding-bottom: 32px;
+
+  .left, .right {
+    position: relative;
+  }
+
+  .right {
+    width: 88%;
+    padding-right: 100% - $width ;
+
+    p {
+      margin: 0;
+      padding: 8px;
+      background-color: @orange-4;
+
+      &.ourFather, &.hailHolyQueen {
+        background-color: @orange-1;
+      }
+
+      &.hailMary {
+        background-color: @orange-2;
+      }
+
+      &.gloryBe, &.apostlesCreed, &.signOfTheCross {
+        background-color: @orange-3;
+      }
+    }
+  }
+
+  &:first-child .left {
+    align-self: flex-start;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}

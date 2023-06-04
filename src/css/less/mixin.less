@@ -1,0 +1,68 @@
+.title-stripe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  height: @header-height;
+  margin: 0;
+  text-align: center;
+
+  span {
+    background: white;
+    padding: 0 45px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    border-top: solid @header-stripe-width @orange-1;
+    width: 100%;
+    position: absolute;
+    top: calc(calc((@header-height / 2) - calc(@header-stripe-width / 4)));
+    z-index: 0;
+  }
+}
+
+.cross {
+  position: absolute;
+  display: inline-block;
+  background-color: @grey-2;
+  height: 150px;
+  width: 20px;
+  left: calc(calc($width / -2) - @chain-width / 2 );
+
+  &:after {
+    background-color: @grey-2;
+    content: "";
+    height: 20px;
+    left: -40px;
+    position: absolute;
+    top: 40px;
+    width: 100px;
+  }
+}
+
+.circle, .bigCircle {
+  position: absolute;
+  display: inline-block;
+  border-radius: 50%
+}
+
+.circle {
+  top: calc(@normal-circle-size / -2);
+  left: calc(calc(@normal-circle-size / -2) - @chain-width / 2 );
+  width: @normal-circle-size;
+  height: $width;
+  background-color: @orange-2;
+}
+
+.bigCircle {
+  top: calc(@big-circle-size / -2);
+  left: calc(calc(@big-circle-size / -2) - @chain-width / 2 );
+  width: @big-circle-size;
+  height: $width;
+  background-color: @orange-1;
+}

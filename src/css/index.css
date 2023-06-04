@@ -1,7 +1,8 @@
 html {
   box-sizing: border-box;
+  font-family: Verdana, Arial, sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: normal;
 }
 *,
 *:before,
@@ -15,10 +16,193 @@ body {
   min-height: 100%;
 }
 main {
-  margin: auto;
-  max-width: 1280px;
+  margin: -50px auto 0 auto;
+  max-width: 560px;
   text-align: center;
 }
 section {
   height: 540px;
+}
+h1 {
+  font-size: 48px;
+}
+.title-stripe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 220px;
+  margin: 0;
+  text-align: center;
+}
+.title-stripe span {
+  background: white;
+  padding: 0 45px;
+  position: relative;
+  z-index: 1;
+}
+.title-stripe:before {
+  content: "";
+  display: block;
+  border-top: solid 12px #FFAC26;
+  width: 100%;
+  position: absolute;
+  top: calc(calc((220px / 2) - calc(12px / 4)));
+  z-index: 0;
+}
+.cross {
+  position: absolute;
+  display: inline-block;
+  background-color: #4D4D4D;
+  height: 150px;
+  width: 20px;
+  left: calc(calc(20px / -2) - 6px / 2);
+}
+.cross:after {
+  background-color: #4D4D4D;
+  content: "";
+  height: 20px;
+  left: -40px;
+  position: absolute;
+  top: 40px;
+  width: 100px;
+}
+.circle,
+.bigCircle {
+  position: absolute;
+  display: inline-block;
+  border-radius: 50%;
+}
+.circle {
+  top: calc(44px / -2);
+  left: calc(calc(44px / -2) - 6px / 2);
+  width: 44px;
+  height: 44px;
+  background-color: #FFFF78;
+}
+.bigCircle {
+  top: calc(64px / -2);
+  left: calc(calc(64px / -2) - 6px / 2);
+  width: 64px;
+  height: 64px;
+  background-color: #FFAC26;
+}
+header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 220px;
+  margin: 0;
+  text-align: center;
+}
+header h1 span {
+  background: white;
+  padding: 0 45px;
+  position: relative;
+  z-index: 1;
+}
+header h1:before {
+  content: "";
+  display: block;
+  border-top: solid 12px #FFAC26;
+  width: 100%;
+  position: absolute;
+  top: calc(calc((220px / 2) - calc(12px / 4)));
+  z-index: 0;
+}
+nav {
+  border-bottom: 4px solid #FFAC26;
+}
+nav div.links {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1280px;
+}
+nav div.links a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+.title {
+  position: relative;
+  height: 220px;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.title span {
+  background: white;
+  padding: 0 45px;
+  position: relative;
+  z-index: 1;
+}
+.title:before {
+  content: "";
+  display: block;
+  border-top: solid 12px #FFAC26;
+  width: 100%;
+  position: absolute;
+  top: calc(calc((220px / 2) - calc(12px / 4)));
+  z-index: 0;
+}
+.title .adjective {
+  font-weight: bold;
+}
+.title span {
+  padding: 0 34px;
+}
+.title:before {
+  margin: auto;
+  width: 80%;
+  left: calc((100% - 80%) / 2);
+  border-top: solid 4px #BBB;
+  top: calc(calc((200px / 2) - calc(4px / 4)));
+}
+.prayer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 6px solid #BBB;
+  padding-bottom: 32px;
+}
+.prayer .left,
+.prayer .right {
+  position: relative;
+}
+.prayer .right {
+  width: 88%;
+  padding-right: 12%;
+}
+.prayer .right p {
+  margin: 0;
+  padding: 8px;
+  background-color: #FFCC7C;
+}
+.prayer .right p.ourFather,
+.prayer .right p.hailHolyQueen {
+  background-color: #FFAC26;
+}
+.prayer .right p.hailMary {
+  background-color: #FFFF78;
+}
+.prayer .right p.gloryBe,
+.prayer .right p.apostlesCreed,
+.prayer .right p.signOfTheCross {
+  background-color: #FFF9B4;
+}
+.prayer:first-child .left {
+  align-self: flex-start;
+}
+.prayer:last-child {
+  padding-bottom: 0;
 }
