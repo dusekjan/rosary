@@ -1,9 +1,10 @@
 import data from "../texts.json"
-import {Link, useLocation, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
+import {useContext} from "react";
+import DoneCounterContext from "../context/doneCounter";
 
 function Navigation() {
-  const { pathname } = useLocation();
-  const navigate = useNavigate();
+  const { counter, setCounter } = useContext(DoneCounterContext)
 
   const links = [
     { label: data.today, path: "/" },
@@ -13,9 +14,14 @@ function Navigation() {
     { label: data.luminous.title, path: "/svetla" }
   ];
 
+  const handleClick = () => {
+    const doneInDecades = document.querySelectorAll(".decade .prayer.grey").length
+    setCounter(counter - doneInDecades)
+  }
+
   const renderedLinks = links.map((link) => {
     return (
-      <Link key={link.label} to={link.path}>
+      <Link key={link.label} onClick={handleClick} to={link.path}>
         {link.label}
       </Link>
     );

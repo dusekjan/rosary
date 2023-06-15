@@ -1,6 +1,5 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Layout from "./components/Layout";
-import ScrollToTop from "./components/ScrollToTop";
 import ErrorPage from "./pages/ErrorPage";
 import RosaryPage, {TODAYS, JOYFUL, SORROWFUL, GLORIOUS, LUMINOUS} from "./pages/RosaryPage";
 
@@ -12,7 +11,6 @@ function App() {
     return (
         <>
             <BrowserRouter>
-                <ScrollToTop />  {/* magic for automatic scroll to the top after redirect */}
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<RosaryPage rosaryType={TODAYS} />} />

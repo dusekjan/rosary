@@ -1,9 +1,11 @@
 import {useOutletContext} from "react-router-dom";
-import {useEffect} from "react";
+import {useContext, useEffect} from "react";
 import Beginning from "../components/Beginning";
 import Decade from "../components/Decade";
 import data from "../texts.json"
 import Ending from "../components/Ending";
+import ModeContext from "../context/mode";
+import Mysteries from "../components/Mysteries";
 
 export const TODAYS = "todays"
 export const JOYFUL = "joyful"
@@ -13,6 +15,8 @@ export const LUMINOUS = "luminous"
 
 function RosaryPage({rosaryType}) {
     const [rosary, setRosary] = useOutletContext()
+    const { secrets, SECRETS } = useContext(ModeContext)
+
     const showTodays = rosary === TODAYS
 
     useEffect(() => {
@@ -28,18 +32,32 @@ function RosaryPage({rosaryType}) {
         }
     }
 
-    const renderedDecades = mysteries && mysteries.map((mystery, index) => {
-        return index === 0 ?
-            <Decade mystery={mystery} fatima={false} key={mystery}/> :
-            <Decade mystery={mystery} key={mystery}/>
-    })
+    console.log(secrets)
+
+    const content = () => {
+        if (mysteries && (secrets === SECRETS)) {
+            return <Mysteries mysteries={mysteries} />
+        } else if (mysteries) {
+            function mapDecades(mystery, index) {
+                return index === 0 ?
+                    <Decade mystery={mystery} fatima={false} key={mystery}/> :
+                    <Decade mystery={mystery} key={mystery}/>
+            }
+
+            return (
+                <>
+                    <Beginning/>
+                    {mysteries.map(mapDecades)}
+                    <Ending />
+                </>)
+
+        }
+    }
 
     return (
         rosary &&
         <main>
-            <Beginning/>
-            {renderedDecades}
-            <Ending />
+            { content() }
         </main>
     );
 }

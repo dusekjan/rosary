@@ -8,8 +8,11 @@
 @normal-circle-size: 44px;
 @big-circle-size: 64px;
 
-@grey-1: #BBB;
+@info-height: 32px;
+
+@grey-1: #B2B2B2;
 @grey-2: #4D4D4D;
+@grey-3: #CCC;
 @orange-1: #FFAC26;
 @orange-2: #FFFF78;
 @orange-3: #FFF9B4;
@@ -27,7 +30,6 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
   font-family: inherit;
-  //border: 1px solid black;
 }
 
 body {
@@ -36,10 +38,36 @@ body {
   min-height: 100%;
 }
 
+#root {
+  white-space: pre-line;
+}
+
 main {
-  margin: -50px auto 0 auto;
+  margin: 0 auto 0 auto;
   max-width: @main-width;
   text-align: center;
+}
+
+.info {
+  .fadeInAnimation;
+  transition: color 300ms ease-out;
+  margin: -50px 0 18px 0;
+  line-height: @info-height;
+  font-style: italic;
+  font-size: 14px;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  svg {
+    transition: color 300ms ease-out;
+    margin-right: 8px;
+    height: 20px;
+    width: 20px;
+  }
 }
 
 section {
@@ -51,7 +79,9 @@ h1 {
 }
 
 @import "mixin";
+@import "button";
 @import "header";
 @import "navigation";
 @import "title";
+@import "tools";
 @import "prayer";

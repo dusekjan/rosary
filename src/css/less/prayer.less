@@ -1,3 +1,12 @@
+.mysteries .prayer:first-child .left,
+main > .prayer:first-child .left {
+  align-self: flex-start;
+}
+
+main > .prayer:last-child {
+  padding-bottom: 0;
+}
+
 .prayer {
   display: flex;
   flex-flow: row nowrap;
@@ -7,38 +16,62 @@
   border-left: @chain-width solid @grey-1;
   padding-bottom: 32px;
 
-  .left, .right {
+  .left, .right {  // left = shape, right = text of prayer
     position: relative;
   }
 
   .right {
     width: 88%;
-    padding-right: 100% - $width ;
+    padding-right: 100% - $width;
 
-    p {
+    p {  // prayer
+      border-radius: 8px;
+      cursor: default;
       margin: 0;
       padding: 8px;
       background-color: @orange-4;
+      border: 2px solid @orange-4;
+      transition: background-color 300ms ease-out,
+                  border-color 300ms ease-out,
+                  color 300ms ease-out;
 
       &.ourFather, &.hailHolyQueen {
         background-color: @orange-1;
+        border-color: @orange-1;
       }
 
       &.hailMary {
         background-color: @orange-2;
+        border-color: @orange-2;
       }
 
       &.gloryBe, &.apostlesCreed, &.signOfTheCross {
         background-color: @orange-3;
+        border-color: @orange-3;
+      }
+
+      &:hover {
+        .greyBox;
+      }
+
+      &.short {
+        font-style: italic;
       }
     }
   }
 
-  &:first-child .left {
-    align-self: flex-start;
+  &.grey {
+    .right p { .greyBox }
+    .left span,
+    .left span.cross,
+    .left span.cross:after {
+      background-color: @grey-3;
+    }
   }
+}
 
-  &:last-child {
-    padding-bottom: 0;
-  }
+.greyBox {
+  background-color: white !important;
+  border-color: @grey-1 !important;
+  color: @grey-3 !important;
 }

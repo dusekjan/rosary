@@ -15,10 +15,33 @@ body {
   background-color: white;
   min-height: 100%;
 }
+#root {
+  white-space: pre-line;
+}
 main {
-  margin: -50px auto 0 auto;
+  margin: 0 auto 0 auto;
   max-width: 560px;
   text-align: center;
+}
+.info {
+  animation: fadeInAnimation ease-out 1.5s;
+  animation-iteration-count: 1;
+  transition: color 300ms ease-out;
+  margin: -50px 0 18px 0;
+  line-height: 32px;
+  font-style: italic;
+  font-size: 14px;
+}
+.info span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info svg {
+  transition: color 300ms ease-out;
+  margin-right: 8px;
+  height: 20px;
+  width: 20px;
 }
 section {
   height: 540px;
@@ -57,8 +80,10 @@ h1 {
   height: 150px;
   width: 20px;
   left: calc(calc(20px / -2) - 6px / 2);
+  transition: background-color 300ms ease-out;
 }
 .cross:after {
+  transition: background-color 300ms ease-out;
   background-color: #4D4D4D;
   content: "";
   height: 20px;
@@ -69,6 +94,7 @@ h1 {
 }
 .circle,
 .bigCircle {
+  transition: background-color 300ms ease-out;
   position: absolute;
   display: inline-block;
   border-radius: 50%;
@@ -86,6 +112,134 @@ h1 {
   width: 64px;
   height: 64px;
   background-color: #FFAC26;
+}
+.fadeInAnimation {
+  animation: fadeInAnimation ease-out 1.5s;
+  animation-iteration-count: 1;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+button {
+  transition: all 300ms ease;
+}
+.info button {
+  position: relative;
+  height: 32px;
+  width: 140px;
+  cursor: pointer;
+  background-color: #FFAC26;
+  border: 2px solid #FFAC26;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.info button:hover {
+  border: 2px solid #FFCC7C;
+  background-color: #FFCC7C;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+label *,
+label *:before,
+label *:after {
+  box-sizing: initial;
+}
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  height: 48px;
+  margin: 0 8px;
+  padding: 0 12px;
+  border-bottom: 2px solid #FFAC26;
+  transition: border-bottom-color 0.3s ease;
+}
+label.disabled {
+  border-bottom-color: #CCC;
+}
+label span {
+  margin-right: 16px;
+}
+label .switch {
+  border: 2px solid #FFAC26;
+  background-color: #FFAC26;
+  position: relative;
+  width: 56px;
+  height: 28px;
+  overflow: hidden;
+  border-radius: 100px;
+}
+label .switch.disabled {
+  border: 2px solid #CCC;
+  background-color: #CCC;
+}
+label .switch.disabled .knobs:before {
+  color: white;
+}
+label .switch .layer,
+label .switch .knobs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease all;
+}
+label .switch .layer {
+  width: 100%;
+  background-color: #FFAC26;
+  z-index: 1;
+}
+label .switch .knobs {
+  z-index: 2;
+}
+label .switch .knobs:before {
+  content: "ANO";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 10px;
+  color: #4D4D4D;
+  font-size: 8px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 10px;
+  padding: 5px 1px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+label .switch .checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+label .switch .checkbox:checked + .knobs:before {
+  content: "NE";
+  left: 30px;
+  background-color: #FFAC26;
+  color: white;
+}
+label .switch .checkbox:checked ~ .layer {
+  background-color: white;
+}
+label .switch .checkbox:disabled + .knobs:before {
+  background-color: #4D4D4D;
+}
+label .switch .checkbox:disabled ~ .layer {
+  background-color: #CCC;
 }
 header h1 {
   display: flex;
@@ -164,15 +318,30 @@ nav div.links a {
   margin: auto;
   width: 80%;
   left: calc((100% - 80%) / 2);
-  border-top: solid 4px #BBB;
+  border-top: solid 4px #B2B2B2;
   top: calc(calc((200px / 2) - calc(4px / 4)));
+}
+.tools {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: -50px;
+  position: relative;
+  z-index: 1;
+}
+.mysteries .prayer:first-child .left,
+main > .prayer:first-child .left {
+  align-self: flex-start;
+}
+main > .prayer:last-child {
+  padding-bottom: 0;
 }
 .prayer {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  border-left: 6px solid #BBB;
+  border-left: 6px solid #B2B2B2;
   padding-bottom: 32px;
 }
 .prayer .left,
@@ -184,25 +353,49 @@ nav div.links a {
   padding-right: 12%;
 }
 .prayer .right p {
+  border-radius: 8px;
+  cursor: default;
   margin: 0;
   padding: 8px;
   background-color: #FFCC7C;
+  border: 2px solid #FFCC7C;
+  transition: background-color 300ms ease-out, border-color 300ms ease-out, color 300ms ease-out;
 }
 .prayer .right p.ourFather,
 .prayer .right p.hailHolyQueen {
   background-color: #FFAC26;
+  border-color: #FFAC26;
 }
 .prayer .right p.hailMary {
   background-color: #FFFF78;
+  border-color: #FFFF78;
 }
 .prayer .right p.gloryBe,
 .prayer .right p.apostlesCreed,
 .prayer .right p.signOfTheCross {
   background-color: #FFF9B4;
+  border-color: #FFF9B4;
 }
-.prayer:first-child .left {
-  align-self: flex-start;
+.prayer .right p:hover {
+  background-color: white !important;
+  border-color: #B2B2B2 !important;
+  color: #CCC !important;
 }
-.prayer:last-child {
-  padding-bottom: 0;
+.prayer .right p.short {
+  font-style: italic;
+}
+.prayer.grey .right p {
+  background-color: white !important;
+  border-color: #B2B2B2 !important;
+  color: #CCC !important;
+}
+.prayer.grey .left span,
+.prayer.grey .left span.cross,
+.prayer.grey .left span.cross:after {
+  background-color: #CCC;
+}
+.greyBox {
+  background-color: white !important;
+  border-color: #B2B2B2 !important;
+  color: #CCC !important;
 }

@@ -33,8 +33,10 @@
   height: 150px;
   width: 20px;
   left: calc(calc($width / -2) - @chain-width / 2 );
+  transition: background-color 300ms ease-out;
 
   &:after {
+    transition: background-color 300ms ease-out;
     background-color: @grey-2;
     content: "";
     height: 20px;
@@ -46,9 +48,10 @@
 }
 
 .circle, .bigCircle {
+  transition: background-color 300ms ease-out;
   position: absolute;
   display: inline-block;
-  border-radius: 50%
+  border-radius: 50%;
 }
 
 .circle {
@@ -65,4 +68,18 @@
   width: @big-circle-size;
   height: $width;
   background-color: @orange-1;
+}
+
+.fadeInAnimation {
+  animation: fadeInAnimation ease-out 1.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }
