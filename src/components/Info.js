@@ -17,7 +17,7 @@ function Info() {
             {
                 counter === 0
                 ? <span><BsInfoSquare />klikněte na odmodlenou část</span>
-                : <span><button onClick={handleClick}>Začít znovu</button></span>
+                : <span><button onClick={handleClick}>ZAČÍT ZNOVU</button></span>
             }
         </div>
     );

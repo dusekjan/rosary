@@ -4,22 +4,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 16px;
 
-  height: @title-height;
+  height: @title-height !important;
 
   .adjective {
     font-weight: bold;
   }
 
-  span {
+  h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
     padding: 0 34px;
+
+    @media @mobile {
+      letter-spacing: 1px;
+      padding: 0 12px;
+    }
   }
 
   &:before {
     margin: auto;
-    width: 80%;
-    left: calc((100% - $width) / 2);
     border-top: solid @title-stripe-width @grey-1;
     top: calc(calc((@title-height / 2) - calc(@title-stripe-width / 4)));
+
+    @media @title-mobile-breakpoint {
+      width: 90%;
+      left: calc((100% - $width) / 2);
+    }
+    @media @title-tablet-breakpoint {
+      width: 80%;
+      left: calc((100% - $width) / 2);
+    }
   }
 }

@@ -1,5 +1,31 @@
 header {
   h1 {
     .title-stripe;
+
+    font-size: 48px;
+    font-weight: normal;
+    letter-spacing: 24px;
+    text-indent: 24px;
+
+    @media @header-mobile-breakpoint {
+      letter-spacing: 20px;
+      text-indent: 20px;
+
+      span {
+        padding: 0 8px;
+      }
+    }
+
+    @media @mobile {
+      letter-spacing: 12px;
+      text-indent: 12px;
+      font-size: 32px;
+    }
+
+    @media @mini-mobile {
+      letter-spacing: 8px;
+      text-indent: 8px;
+      padding: 0;
+    }
   }
 }

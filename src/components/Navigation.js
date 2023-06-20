@@ -2,9 +2,11 @@ import data from "../texts.json"
 import {Link} from "react-router-dom";
 import {useContext} from "react";
 import DoneCounterContext from "../context/doneCounter";
+import { useLocation } from 'react-router-dom'
 
 function Navigation() {
   const { counter, setCounter } = useContext(DoneCounterContext)
+  const location = useLocation();
 
   const links = [
     { label: data.today, path: "/" },
@@ -19,9 +21,10 @@ function Navigation() {
     setCounter(counter - doneInDecades)
   }
 
-  const renderedLinks = links.map((link) => {
+  const renderedLinks = links.map((link, index) => {
+    const active = location.pathname === link.path ? "active" : ""
     return (
-      <Link key={link.label} onClick={handleClick} to={link.path}>
+      <Link className={active} key={link.label} onClick={handleClick} to={link.path}>
         {link.label}
       </Link>
     );

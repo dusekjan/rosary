@@ -8,8 +8,6 @@ function Prayer({prayer, mystery}) {
     const { length, LONG, SHORT } = useContext(ModeContext)
     const { counter, incrementCounter, decrementCounter } = useContext(DoneCounterContext)
 
-    console.log(counter, done)
-
     useEffect(() => {
         if (counter === 0 && done !== false) {
             setDone(false)

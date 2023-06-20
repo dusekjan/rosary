@@ -8,17 +8,17 @@ function Title({rosary}) {
 
     if (rosary) {
         if (!showTodays) {
-            title = data[rosary].title
+            title = <h2>RŮŽENEC <b>{data[rosary].adjective}</b></h2>
         } else {
             const adj = <span className="adjective">{data[getTodaysRosary()].adjective}</span>
-            title = <>{data.today}<br />{adj}</>
+            title = <h2>{data.today}<br /><b>{adj}</b></h2>
         }
     }
 
     return (
         rosary &&
         <div className="title">
-            <span>{title}</span>
+            {title}
         </div>
     )
 }

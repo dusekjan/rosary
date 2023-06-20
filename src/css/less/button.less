@@ -9,15 +9,16 @@ button {
   cursor: pointer;
 
   background-color: @orange-1;
-  border: 2px solid @orange-1;
+  border: none;
   border-radius: 4px;
+
+  transition: 0.5s;
+  color: white;
 
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
   &:hover {
-    border: 2px solid @orange-4;
     background-color: @orange-4;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   }
 }
 
@@ -29,7 +30,6 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
   font-size: 14px;
 
   height: 48px;
@@ -37,6 +37,12 @@ label {
   padding: 0 12px;
   border-bottom: 2px solid @orange-1;
   transition: border-bottom-color 0.3s ease;
+
+  @media @mobile {
+    justify-content: space-between;
+    width: 90%;
+    max-width: 340px;
+  }
 
   &.disabled {
     border-bottom-color: @grey-3;

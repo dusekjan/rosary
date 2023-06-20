@@ -8,11 +8,19 @@
   margin: 0;
   text-align: center;
 
-  span {
+  @media @mobile {
+    height: @header-height-mobile;
+  }
+
+  h2, span {
     background: white;
     padding: 0 45px;
     position: relative;
     z-index: 1;
+
+    @media @mobile {
+      padding: 0 8px;
+    }
   }
 
   &:before {
@@ -21,8 +29,12 @@
     border-top: solid @header-stripe-width @orange-1;
     width: 100%;
     position: absolute;
-    top: calc(calc((@header-height / 2) - calc(@header-stripe-width / 4)));
+    top: calc(calc((@header-height / 2) - calc(@header-stripe-width / 2)));
     z-index: 0;
+
+    @media @mobile {
+      top: calc(calc((@header-height-mobile / 2) - calc(@header-stripe-width / 2)));
+    }
   }
 }
 
@@ -30,10 +42,17 @@
   position: absolute;
   display: inline-block;
   background-color: @grey-2;
-  height: 150px;
-  width: 20px;
-  left: calc(calc($width / -2) - @chain-width / 2 );
   transition: background-color 300ms ease-out;
+  @media @prayer-mobile-breakpoint {
+    height: 115px;
+    width: 16px;
+    left: calc(calc($width / -2) - @chain-width / 2 );
+  }
+  @media @prayer-tablet-breakpoint {
+    height: 150px;
+    width: 20px;
+    left: calc(calc($width / -2) - @chain-width / 2 );
+  }
 
   &:after {
     transition: background-color 300ms ease-out;
@@ -44,6 +63,13 @@
     position: absolute;
     top: 40px;
     width: 100px;
+
+    @media @prayer-mobile-breakpoint {
+      height: 16px;
+      width: 80px;
+      left: -32px;
+      top: 30px;
+    }
   }
 }
 
@@ -55,19 +81,37 @@
 }
 
 .circle {
-  top: calc(@normal-circle-size / -2);
-  left: calc(calc(@normal-circle-size / -2) - @chain-width / 2 );
-  width: @normal-circle-size;
-  height: $width;
   background-color: @orange-2;
+
+  @media @prayer-mobile-breakpoint {
+    top: calc(@normal-circle-size-mobile / -2);
+    left: calc(calc(@normal-circle-size-mobile / -2) - @chain-width / 2 );
+    width: @normal-circle-size-mobile;
+    height: $width;
+  }
+  @media @prayer-tablet-breakpoint {
+    top: calc(@normal-circle-size / -2);
+    left: calc(calc(@normal-circle-size / -2) - @chain-width / 2 );
+    width: @normal-circle-size;
+    height: $width;
+  }
 }
 
 .bigCircle {
-  top: calc(@big-circle-size / -2);
-  left: calc(calc(@big-circle-size / -2) - @chain-width / 2 );
-  width: @big-circle-size;
-  height: $width;
   background-color: @orange-1;
+
+  @media @prayer-mobile-breakpoint {
+    top: calc(@big-circle-size-mobile / -2);
+    left: calc(calc(@big-circle-size-mobile / -2) - @chain-width / 2 );
+    width: @big-circle-size-mobile;
+    height: $width;
+  }
+  @media @prayer-tablet-breakpoint {
+    top: calc(@big-circle-size / -2);
+    left: calc(calc(@big-circle-size / -2) - @chain-width / 2 );
+    width: @big-circle-size;
+    height: $width;
+  }
 }
 
 .fadeInAnimation {

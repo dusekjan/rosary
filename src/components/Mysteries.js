@@ -1,7 +1,5 @@
 import React from 'react';
 import Prayer from "./Prayer";
-import data from "../texts.json";
-import prayer from "./Prayer";
 
 function Mysteries({mysteries}) {
 

@@ -27,7 +27,7 @@ function Tools() {
     return (
         <div className="tools">
             <label className={lengthDisabled ? "disabled" : ""}>
-                <span>Krátká verze</span>
+                <span>KRÁTKÁ VERZE</span>
                 <div className={`switch${lengthDisabled ? " disabled" : ""}`}>
                     <input type="checkbox"
                            className="checkbox"
@@ -40,7 +40,7 @@ function Tools() {
                 </div>
             </label>
             <label className="switch">
-                <span>Pouze tajemství</span>
+                <span>POUZE TAJEMSTVÍ</span>
                 <div className="switch">
                     <input type="checkbox"
                            className="checkbox"

@@ -13,7 +13,6 @@ function ModeProvider({ children }) {
   useEffect(() => {
     const savedLength = localStorage.getItem("length");
     const savedSecrets = localStorage.getItem("secrets");
-    console.log("length", savedLength, "secrets", savedSecrets);
 
     [LONG, SHORT].includes(savedLength) && setLength(savedLength);
     [SECRETS, NOSECRETS].includes(savedSecrets) && setSecrets(savedSecrets);

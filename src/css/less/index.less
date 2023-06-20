@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 @header-height: 220px;
+@header-height-mobile: 140px;
 @header-stripe-width: 12px;
-@title-height: 200px;
+@title-height: 100px;
 @title-stripe-width: 4px;
 
 @chain-width: 6px;
 
 @normal-circle-size: 44px;
+@normal-circle-size-mobile: 36px;
 @big-circle-size: 64px;
+@big-circle-size-mobile: 44px;
 
 @info-height: 32px;
 
@@ -19,12 +24,28 @@
 @orange-4: #FFCC7C;
 
 @main-width: 560px;
+@mobile-breakpoint: 500px;
+@tablet-breakpoint: @mobile-breakpoint + 1px;
+
+@mini-mobile: ~"(max-width: 370px)";
+@mobile: ~"(max-width: @{mobile-breakpoint})";
+@tablet: ~"(min-width: @{tablet-breakpoint})";
+
+@title-mobile-breakpoint: ~"(max-width: 680px)";
+@title-tablet-breakpoint: ~"(min-width: 681px)";
+@header-mobile-breakpoint: ~"(max-width: 680px)";
+@prayer-mobile-breakpoint: ~"(max-width: 680px)";
+@prayer-tablet-breakpoint: ~"(min-width: 681px)";
+@navigation-mobile-breakpoint: ~"(max-width: @{mobile-breakpoint})";
+@navigation-tablet-breakpoint: ~"(min-width: 501px) and (max-width: 700px)";
+@navigation-desktop-breakpoint: ~"(min-width: 701px) and (max-width: 1150px)";
+@navigation-desktop-max-breakpoint: ~"(min-width: 1151px)";
 
 html {
   box-sizing: border-box;
-  font-family: Verdana, Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
   font-style: normal;
-  font-weight: normal;
 }
 
 *, *:before, *:after {
@@ -43,18 +64,21 @@ body {
 }
 
 main {
-  margin: 0 auto 0 auto;
+  margin: 0 auto 8px auto;
   max-width: @main-width;
   text-align: center;
 }
 
 .info {
   .fadeInAnimation;
+  position: relative;
+  z-index: 1;
   transition: color 300ms ease-out;
-  margin: -50px 0 18px 0;
+  margin-bottom: 18px;
   line-height: @info-height;
   font-style: italic;
-  font-size: 14px;
+  font-size: 15px;
+  letter-spacing: 1px;
 
   span {
     display: flex;
@@ -72,10 +96,6 @@ main {
 
 section {
   height: 540px;
-}
-
-h1 {
-  font-size: 48px;
 }
 
 @import "mixin";

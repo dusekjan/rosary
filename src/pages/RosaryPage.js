@@ -32,8 +32,6 @@ function RosaryPage({rosaryType}) {
         }
     }
 
-    console.log(secrets)
-
     const content = () => {
         if (mysteries && (secrets === SECRETS)) {
             return <Mysteries mysteries={mysteries} />
@@ -49,8 +47,8 @@ function RosaryPage({rosaryType}) {
                     <Beginning/>
                     {mysteries.map(mapDecades)}
                     <Ending />
-                </>)
-
+                </>
+            )
         }
     }
 
