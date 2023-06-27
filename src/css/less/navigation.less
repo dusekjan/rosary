@@ -28,20 +28,21 @@ nav {
     a {
       text-decoration: none;
       font-weight: 500;
-      color: black;
+      color: @font-color;
       padding: 8px 16px;
       text-align: center;
       flex-basis: 216px;
       margin: 0 4px;
 
-      border-left: 3px solid white;
-      border-right: 3px solid white;
-      transition: 500ms all;
+      border-left: 3px solid @background;
+      border-right: 3px solid @background;
+      transition: @transition-dark-mode all;
 
       @media @navigation-mobile-breakpoint {
         flex-basis: initial;
         letter-spacing: 1px;
         min-width: 80%;
+        transition: font-weight 0s, border-left-color @transition-dark-mode, border-right-color @transition-dark-mode;
       }
 
       @media @navigation-tablet-breakpoint {
@@ -57,8 +58,8 @@ nav {
       }
 
       &:hover, &.active {
-        border-left: 3px solid @orange-1;
-        border-right: 3px solid @orange-1;
+        border-left-color: @orange-1;
+        border-right-color: @orange-1;
         margin-bottom: 6px;
 
         @media @navigation-mobile-breakpoint {

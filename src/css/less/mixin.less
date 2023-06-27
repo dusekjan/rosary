@@ -13,10 +13,11 @@
   }
 
   h2, span {
-    background: white;
+    background-color: @background;
     padding: 0 45px;
     position: relative;
     z-index: 1;
+    transition: background-color @transition-dark-mode;
 
     @media @mobile {
       padding: 0 8px;
@@ -41,7 +42,7 @@
 .cross {
   position: absolute;
   display: inline-block;
-  background-color: @grey-2;
+  background-color: @cross-normal;
   transition: background-color 300ms ease-out;
   @media @prayer-mobile-breakpoint {
     height: 115px;
@@ -56,7 +57,7 @@
 
   &:after {
     transition: background-color 300ms ease-out;
-    background-color: @grey-2;
+    background-color: @cross-normal;
     content: "";
     height: 20px;
     left: -40px;
@@ -98,7 +99,7 @@
 }
 
 .bigCircle {
-  background-color: @orange-1;
+  background-color: @orange-5;
 
   @media @prayer-mobile-breakpoint {
     top: calc(@big-circle-size-mobile / -2);

@@ -1,107 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
-@header-height: 220px;
-@header-height-mobile: 140px;
-@header-stripe-width: 12px;
-@title-height: 100px;
-@title-stripe-width: 4px;
+.light {
+  @background: #ffffff;
+  @grey-1: #B2B2B2;
+  @grey-2: #4D4D4D;
+  @grey-3: #CCC;
+  @cross-normal: @grey-2;
+  @cross-done: @grey-3;
+  @orange-1: #FFAC26;
+  @orange-2: #fff2c9;
+  @orange-3: #ffd299;
+  @orange-4: #ffd38c;
+  @orange-5: #ffe493;
+  @orange-6: #ffc76b;
+  @font-color: #000;
+  @main-color: #000;
 
-@chain-width: 6px;
+  @import (multiple) "variables";
+  @import (multiple) "mixin";
+  @import (multiple) "general";
+  @import (multiple) "button";
+  @import (multiple) "header";
+  @import (multiple) "navigation";
+  @import (multiple) "title";
+  @import (multiple) "info";
+  @import (multiple) "tools";
+  @import (multiple) "prayer";
 
-@normal-circle-size: 44px;
-@normal-circle-size-mobile: 36px;
-@big-circle-size: 64px;
-@big-circle-size-mobile: 44px;
-
-@info-height: 32px;
-
-@grey-1: #B2B2B2;
-@grey-2: #4D4D4D;
-@grey-3: #CCC;
-@orange-1: #FFAC26;
-@orange-2: #FFFF78;
-@orange-3: #FFF9B4;
-@orange-4: #FFCC7C;
-
-@main-width: 560px;
-@mobile-breakpoint: 500px;
-@tablet-breakpoint: @mobile-breakpoint + 1px;
-
-@mini-mobile: ~"(max-width: 370px)";
-@mobile: ~"(max-width: @{mobile-breakpoint})";
-@tablet: ~"(min-width: @{tablet-breakpoint})";
-
-@title-mobile-breakpoint: ~"(max-width: 680px)";
-@title-tablet-breakpoint: ~"(min-width: 681px)";
-@header-mobile-breakpoint: ~"(max-width: 680px)";
-@prayer-mobile-breakpoint: ~"(max-width: 680px)";
-@prayer-tablet-breakpoint: ~"(min-width: 681px)";
-@navigation-mobile-breakpoint: ~"(max-width: @{mobile-breakpoint})";
-@navigation-tablet-breakpoint: ~"(min-width: 501px) and (max-width: 700px)";
-@navigation-desktop-breakpoint: ~"(min-width: 701px) and (max-width: 1150px)";
-@navigation-desktop-max-breakpoint: ~"(min-width: 1151px)";
-
-html {
-  box-sizing: border-box;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-  font-family: inherit;
-}
-
-body {
-  margin: 0;
-  background-color: white;
-  min-height: 100%;
-}
-
-#root {
-  white-space: pre-line;
-}
-
-main {
-  margin: 0 auto 8px auto;
-  max-width: @main-width;
-  text-align: center;
-}
-
-.info {
-  .fadeInAnimation;
-  position: relative;
-  z-index: 1;
-  transition: color 300ms ease-out;
-  margin-bottom: 18px;
-  line-height: @info-height;
-  font-style: italic;
-  font-size: 15px;
-  letter-spacing: 1px;
-
-  span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  svg {
-    transition: color 300ms ease-out;
-    margin-right: 8px;
-    height: 20px;
-    width: 20px;
+  & {
+    margin: 0;
   }
 }
 
-section {
-  height: 540px;
-}
+.dark {
+  @background: #121212;
+  @grey-1: darken(#B2B2B2, 20);
+  @grey-2: #CCC;
+  @grey-3: #4D4D4D;
+  @cross-normal: #fff2c9;
+  @cross-done: @grey-1;
+  @orange-1: desaturate(#FFAC26, 30);
+  @orange-2: desaturate(darken(#fff2c9, 20), 50);
+  @orange-3: desaturate(darken(#ffd299, 20), 50);
+  @orange-4: desaturate(darken(#ffd38c, 20), 50);
+  @orange-5: desaturate(darken(#ffe493, 20), 50);
+  @orange-6: desaturate(darken(#ffc76b, 20), 50);
+  @font-color: rgba(255,255,255,0.87);
+  @main-color: #000;
 
-@import "mixin";
-@import "button";
-@import "header";
-@import "navigation";
-@import "title";
-@import "tools";
-@import "prayer";
+  @import (multiple) "variables";
+  @import (multiple) "mixin";
+  @import (multiple) "general";
+  @import (multiple) "button";
+  @import (multiple) "header";
+  @import (multiple) "navigation";
+  @import (multiple) "title";
+  @import (multiple) "info";
+  @import (multiple) "tools";
+  @import (multiple) "prayer";
+
+  & {
+    margin: 0;
+  }
+}

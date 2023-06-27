@@ -13,7 +13,7 @@ button {
   border-radius: 4px;
 
   transition: 0.5s;
-  color: white;
+  color: @background;
 
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
@@ -31,6 +31,7 @@ label {
   justify-content: center;
   align-items: center;
   font-size: 14px;
+  font-weight: 500;
 
   height: 48px;
   margin: 0 8px;
@@ -38,7 +39,7 @@ label {
   border-bottom: 2px solid @orange-1;
   transition: border-bottom-color 0.3s ease;
 
-  @media @mobile {
+  @media @tools-mobile-endpoint {
     justify-content: space-between;
     width: 90%;
     max-width: 340px;
@@ -66,7 +67,7 @@ label {
       background-color: @grey-3;
 
       .knobs:before {
-        color: white;
+        color: @background;
       }
     }
 
@@ -102,7 +103,7 @@ label {
         text-align: center;
         line-height: 10px;
         padding: 5px 1px;
-        background-color: white;
+        background-color: @background;
         border-radius: 50%;
         transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
       }
@@ -122,11 +123,11 @@ label {
         content: "NE";
         left: 30px;
         background-color: @orange-1;
-        color: white;
+        color: @background;
       }
 
       &:checked ~ .layer {
-        background-color: white;
+        background-color: @background;
       }
 
       &:disabled + .knobs:before {

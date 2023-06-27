@@ -13,7 +13,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Layout />}>
-                        <Route index element={<RosaryPage rosaryType={TODAYS} />} />
+                        <Route index element={<RosaryPage rosaryType={TODAYS}  />} />
                         <Route path="/radostny" element={<RosaryPage rosaryType={JOYFUL} />} />
                         <Route path="/bolestny" element={<RosaryPage rosaryType={SORROWFUL} />} />
                         <Route path="/slavny" element={<RosaryPage rosaryType={GLORIOUS} />} />

@@ -1,9 +1,19 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import ModeContext from "../context/mode";
 import DoneCounterContext from "../context/doneCounter";
 
 function Tools() {
-    const {length, secrets, setAndSaveMode, LONG, SHORT, SECRETS, NOSECRETS} = useContext(ModeContext)
+    const {
+        length,
+        secrets,
+        nightMode,
+        setAndSaveMode,
+        LONG,
+        SHORT,
+        SECRETS,
+        NOSECRETS,
+        NIGHTMODE,
+        NONIGHTMODE} = useContext(ModeContext)
     const { counter, setCounter } = useContext(DoneCounterContext)
 
     const handleChange = (e) => {
@@ -16,6 +26,9 @@ function Tools() {
             case "showSecrets":
                 setAndSaveMode(!checked ? SECRETS : NOSECRETS);
                 (counter && !checked) && setCounter(0)
+            break;
+            case "nightmode":
+                setAndSaveMode(!checked ? NIGHTMODE : NONIGHTMODE);
             break;
         }
     }
@@ -47,6 +60,18 @@ function Tools() {
                            onChange={handleChange}
                            checked={secretsChecked}
                            data-purpose="showSecrets" />
+                    <div className="knobs"></div>
+                    <div className="layer"></div>
+                </div>
+            </label>
+            <label className="switch">
+                <span>TMAVÝ REŽIM</span>
+                <div className="switch">
+                    <input type="checkbox"
+                           className="checkbox"
+                           onChange={handleChange}
+                           checked={nightMode === NONIGHTMODE}
+                           data-purpose="nightmode" />
                     <div className="knobs"></div>
                     <div className="layer"></div>
                 </div>

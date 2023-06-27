@@ -15,7 +15,7 @@ main > .prayer:last-child,
   align-items: center;
 
   border-left: @chain-width solid @grey-1;
-  padding-bottom: 32px;
+  padding-bottom: 28px;
 
   @media @prayer-mobile-breakpoint {
     margin-left: 42px;
@@ -47,9 +47,15 @@ main > .prayer:last-child,
                   border-color 300ms ease-out,
                   color 300ms ease-out;
 
+      &.signOfTheCrossFirst,
+      &.signOfTheCrossSecond {
+        background-color: @orange-6;
+        border-color: @orange-6;
+      }
+
       &.ourFather, &.hailHolyQueen {
-        background-color: @orange-1;
-        border-color: @orange-1;
+        background-color: @orange-5;
+        border-color: @orange-5;
       }
 
       &.hailMary {
@@ -57,7 +63,8 @@ main > .prayer:last-child,
         border-color: @orange-2;
       }
 
-      &.gloryBe, &.apostlesCreed, &.signOfTheCross {
+      &.gloryBe,
+      &.apostlesCreed {
         background-color: @orange-3;
         border-color: @orange-3;
       }
@@ -77,7 +84,7 @@ main > .prayer:last-child,
     .left span,
     .left span.cross,
     .left span.cross:after {
-      background-color: @grey-3;
+      background-color: @cross-done;
     }
   }
 }
@@ -88,29 +95,29 @@ main > .prayer:last-child,
   }
 
   .prayer:first-child p {
-    border-color: @orange-1;
-    background-color: @orange-1;
+    border-color: @orange-6;
+    background-color: @orange-6;
   }
   .prayer:nth-child(2) p {
-    border-color: @orange-4;
-    background-color: @orange-4;
-  }
-  .prayer:nth-child(3) p {
     border-color: @orange-3;
     background-color: @orange-3;
   }
+  .prayer:nth-child(3) p {
+    border-color: @orange-5;
+    background-color: @orange-5;
+  }
   .prayer:nth-child(4) p {
-    border-color: @orange-4;
-    background-color: @orange-4;
+    border-color: @orange-3;
+    background-color: @orange-3;
   }
   .prayer:last-child p {
-    border: @orange-1;
-    background-color: @orange-1;
+    border: @orange-6;
+    background-color: @orange-6;
   }
 }
 
 .greyBox {
-  background-color: white !important;
+  background-color: @background !important;
   border-color: @grey-1 !important;
   color: @grey-3 !important;
 }
