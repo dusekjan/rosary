@@ -13,8 +13,10 @@ function Layout() {
 
     if ( nightMode === NIGHTMODE) {
         document.body.className = "dark"
+        document.querySelector("meta[name='theme-color']").setAttribute("content", "#121212")
     } else if ( nightMode === NONIGHTMODE ) {
         document.body.className = "light"
+        document.querySelector("meta[name='theme-color']").setAttribute("content", "#FFFFFF")
     }
 
     return (

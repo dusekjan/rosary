@@ -69,8 +69,10 @@ main > .prayer:last-child,
         border-color: @orange-3;
       }
 
-      &:hover {
-        .greyBox;
+      @media @tablet {
+        &:hover {
+          .greyBox;
+        }
       }
 
       &.short {

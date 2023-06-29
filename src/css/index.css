@@ -672,10 +672,12 @@
   background-color: #ffd299;
   border-color: #ffd299;
 }
-.light .prayer .right p:hover {
-  background-color: #ffffff !important;
-  border-color: #B2B2B2 !important;
-  color: #CCC !important;
+@media (min-width: 501px) {
+  .light .prayer .right p:hover {
+    background-color: #ffffff !important;
+    border-color: #B2B2B2 !important;
+    color: #CCC !important;
+  }
 }
 .light .prayer .right p.short {
   font-style: italic;
@@ -1392,10 +1394,12 @@
   background-color: #cc9f66;
   border-color: #cc9f66;
 }
-.dark .prayer .right p:hover {
-  background-color: #121212 !important;
-  border-color: #7f7f7f !important;
-  color: #4D4D4D !important;
+@media (min-width: 501px) {
+  .dark .prayer .right p:hover {
+    background-color: #121212 !important;
+    border-color: #7f7f7f !important;
+    color: #4D4D4D !important;
+  }
 }
 .dark .prayer .right p.short {
   font-style: italic;
