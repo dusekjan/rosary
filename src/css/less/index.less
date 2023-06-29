@@ -1,6 +1,6 @@
 
-.light {
-  @background: #ffffff;
+body.light {
+  @background: #FFFFFF;
   @grey-1: #B2B2B2;
   @grey-2: #4D4D4D;
   @grey-3: #CCC;
@@ -26,12 +26,15 @@
   @import (multiple) "tools";
   @import (multiple) "prayer";
 
-  & {
-    margin: 0;
-  }
+  /* <body> */
+  margin: 0;
+  background-color: @background;
+  transition: background-color @transition-dark-mode;
+  -ms-transition: background-color @transition-dark-mode;
+  -webkit-transition: background-color @transition-dark-mode;
 }
 
-.dark {
+body.dark {
   @background: #121212;
   @grey-1: darken(#B2B2B2, 20);
   @grey-2: #CCC;
@@ -58,7 +61,11 @@
   @import (multiple) "tools";
   @import (multiple) "prayer";
 
-  & {
-    margin: 0;
-  }
+  /* <body> */
+  margin: 0;
+  background-color: @background;
+  transition: background-color @transition-dark-mode;
+  -ms-transition: background-color @transition-dark-mode;
+  -webkit-transition: background-color @transition-dark-mode;
 }
+

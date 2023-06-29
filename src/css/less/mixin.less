@@ -13,11 +13,13 @@
   }
 
   h2, span {
-    background-color: @background;
     padding: 0 45px;
     position: relative;
     z-index: 1;
+    background-color: @background;
     transition: background-color @transition-dark-mode;
+    -ms-transition: background-color @transition-dark-mode;
+    -webkit-transition: background-color @transition-dark-mode;
 
     @media @mobile {
       padding: 0 8px;
