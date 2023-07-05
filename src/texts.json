@@ -1,25 +1,26 @@
 {
-  "today": "DNEŠNÍ RŮŽENEC",
+  "rosary": "Růženec",
+  "today": "Dnešní růženec",
   "firstMysteries": [",\n\nv kterého věříme.\n\n", ",\n\nv kterého doufáme.\n\n", ",\n\nkterého nadevšechno milujeme.\n\n"],
 
   "joyful": {
-    "title": "RŮŽENEC RADOSTNÝ",
-    "adjective": "RADOSTNÝ",
+    "title": "Růženec radostný",
+    "adjective": "radostný",
     "mysteries": [",\n\nkterého jsi z Ducha svatého počala.\n\n", ",\n\ns kterým jsi Alžbětu navštívila.\n\n", ",\n\nkterého jsi v Betlémě porodila.\n\n", ",\n\nkterého jsi v chrámě obětovala.\n\n", ",\n\nkterého jsi v chrámě nalezla.\n\n"]
   },
   "sorrowful": {
-    "title": "RŮŽENEC BOLESTNÝ",
-    "adjective": "BOLESTNÝ",
+    "title": "Růženec bolestný",
+    "adjective": "bolestný",
     "mysteries": [",\n\nkterý se pro nás krví potil.\n\n", ",\n\nkterý byl pro nás bičován.\n\n", ",\n\nkterý byl pro nás trním korunován.\n\n", ",\n\nkterý pro nás nesl těžký kříž.\n\n", ",\n\nkterý byl pro nás ukřižován.\n\n"]
   },
   "glorious": {
-    "title": "RŮŽENEC SLAVNÝ",
-    "adjective": "SLAVNÝ",
+    "title": "Růženec slavný",
+    "adjective": "slavný",
     "mysteries": [",\n\nkterý z mrtvých vstal.\n\n", ",\n\nkterý na nebe vstoupil.\n\n", ",\n\nkterý Ducha svatého seslal.\n\n", ",\n\nkterý tě, Panno, do nebe vzal.\n\n", ",\n\nkterý tě v nebi korunoval.\n\n"]
   },
   "luminous": {
-    "title": "RŮŽENEC SVĚTLA",
-    "adjective": "SVĚTLA",
+    "title": "Růženec světla",
+    "adjective": "světla",
     "mysteries": [",\n\nkterý byl pokřtěn v Jordánu.\n\n", ",\n\nkterý zjevil v Káně svou božskou moc.\n\n", ",\n\nkterý hlásal Boží království a vyzýval k pokání.\n\n", ",\n\nkterý na hoře proměnění zjevil svou slávu.\n\n", ",\n\nkterý ustanovil Eucharistii.\n\n"]
   },
   "prayers": {

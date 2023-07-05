@@ -1,8 +1,9 @@
+import data from "../texts.json"
 
 function Header() {
     return (
         <header>
-            <h1><span>RŮŽENEC</span></h1>
+            <h1><span>{data.rosary}</span></h1>
         </header>
     );
 }

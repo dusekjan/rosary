@@ -366,6 +366,7 @@ body.light header h1 {
   font-weight: normal;
   letter-spacing: 24px;
   text-indent: 24px;
+  text-transform: uppercase;
 }
 @media (max-width: 500px) {
   body.light header h1 {
@@ -460,6 +461,7 @@ body.light nav div.links {
 }
 body.light nav div.links a {
   text-decoration: none;
+  text-transform: uppercase;
   font-weight: 500;
   color: #000;
   padding: 8px 16px;
@@ -513,6 +515,7 @@ body.light .title {
   height: 220px;
   margin: 0;
   text-align: center;
+  text-transform: uppercase;
   margin-top: 16px;
   height: 100px !important;
 }
@@ -1101,6 +1104,7 @@ body.dark header h1 {
   font-weight: normal;
   letter-spacing: 24px;
   text-indent: 24px;
+  text-transform: uppercase;
 }
 @media (max-width: 500px) {
   body.dark header h1 {
@@ -1195,6 +1199,7 @@ body.dark nav div.links {
 }
 body.dark nav div.links a {
   text-decoration: none;
+  text-transform: uppercase;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.87);
   padding: 8px 16px;
@@ -1248,6 +1253,7 @@ body.dark .title {
   height: 220px;
   margin: 0;
   text-align: center;
+  text-transform: uppercase;
   margin-top: 16px;
   height: 100px !important;
 }

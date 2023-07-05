@@ -8,7 +8,7 @@ function Title({rosary}) {
 
     if (rosary) {
         if (!showTodays) {
-            title = <h2>RŮŽENEC <b>{data[rosary].adjective}</b></h2>
+            title = <h2>{data.rosary} <b>{data[rosary].adjective}</b></h2>
         } else {
             const adj = <span className="adjective">{data[getTodaysRosary()].adjective}</span>
             title = <h2>{data.today}<br /><b>{adj}</b></h2>
