@@ -1,6 +1,6 @@
 {
   "today": "DNEŠNÍ RŮŽENEC",
-  "firstMysteries": [",\n\nv kterého věříme.\n\n", ",\n\nv kterého doufáme.\n\n", ",\n\nkterého nade všechno milujeme.\n\n"],
+  "firstMysteries": [",\n\nv kterého věříme.\n\n", ",\n\nv kterého doufáme.\n\n", ",\n\nkterého nadevšechno milujeme.\n\n"],
 
   "joyful": {
     "title": "RŮŽENEC RADOSTNÝ",
@@ -25,7 +25,7 @@
   "prayers": {
     "signOfTheCrossFirst": "Ve jménu Otce i Syna i Ducha svatého.\nAmen.",
     "signOfTheCrossSecond": "Ve jménu Otce i Syna i Ducha svatého.\nAmen.",
-    "apostlesCreed": "Věřím v Boha,\nOtce všemohoucího,\nStvořitele nebe i země,\ni v Ježíše Krista,\nSyna jeho Jediného,\nPána našeho;\njenž se počal z Ducha svatého,\nnarodil se z Marie Panny,\ntrpěl pod Ponciem Pilátem,\nukřižován, umřel i pohřben jest;\nsestoupil do pekel,\ntřetího dne vstal z mrtvých;\nvstoupil na nebesa,\nsedí po pravici Boha,\nOtce všemohoucího;\nodtud přijde soudit živé i mrtvé.\n\nVěřím v Ducha Svatého, svatou církev obecnou, společenství svatých, odpuštění hříchů, vzkříšení těla a život věčný.\nAmen.",
+    "apostlesCreed": "Věřím v Boha,\nOtce všemohoucího,\nStvořitele nebe i země,\ni v Ježíše Krista,\nSyna jeho Jediného,\nPána našeho;\njenž se počal z Ducha svatého,\nnarodil se z Marie Panny,\ntrpěl pod Ponciem Pilátem,\nukřižován umřel i pohřben jest;\nsestoupil do pekel,\ntřetího dne vstal z mrtvých;\nvstoupil na nebesa,\nsedí po pravici Boha,\nOtce všemohoucího;\nodtud přijde soudit živé i mrtvé.\n\nVěřím v Ducha Svatého, svatou církev obecnou, společenství svatých, odpuštění hříchů, vzkříšení těla a život věčný.\nAmen.",
     "ourFather": "Otče náš, jenž jsi na nebesích,\nposvěť se jméno tvé.\nPřijď království tvé.\nBuď vůle tvá jako v nebi, tak i na zemi.\nChléb náš vezdejší dej nám dnes.\nA odpusť nám naše viny,\njako i my odpouštíme našim viníkům.\nA neuveď nás v pokušení,\nale zbav nás od zlého.\nAmen.",
     "hailMary1": "Zdrávas, Maria, milosti plná,\nPán s tebou;\npožehnaná ty mezi ženami\na požehnaný plod života tvého, Ježíš",
     "hailMary2": "Svatá Maria, Matko Boží,\npros za nás hříšné\nnyní i v hodinu smrti naší.\nAmen.",

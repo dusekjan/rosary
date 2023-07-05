@@ -506,13 +506,13 @@ body.light nav div.links a.active {
   }
 }
 body.light .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   height: 220px;
   margin: 0;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 16px;
   height: 100px !important;
 }
@@ -1241,13 +1241,13 @@ body.dark nav div.links a.active {
   }
 }
 body.dark .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   height: 220px;
   margin: 0;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 16px;
   height: 100px !important;
 }
