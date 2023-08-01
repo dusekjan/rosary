@@ -29,4 +29,35 @@ header {
       padding: 0;
     }
   }
+
+  a.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+
+    text-align: center;
+    color: inherit;
+    font-size: 15px;
+    text-decoration: none;
+
+    svg {
+      width: 14px;
+      height: $width;
+      margin-left: 3px;
+    }
+
+    @media @mobile {
+      font-size: 12px;
+
+      svg {
+        width: 11px;
+        height: $width;
+      }
+    }
+  }
 }

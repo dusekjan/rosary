@@ -5,6 +5,7 @@ import Title from "./Title";
 import {useContext, useState} from "react";
 import Info from "./Info";
 import Tools from "./Tools";
+import Footer from "./Footer";
 import ModeContext from "../context/mode";
 
 function Layout() {
@@ -27,6 +28,7 @@ function Layout() {
             <Title rosary={rosary} />
             {rosary && <Info />}
             <Outlet context={[rosary, setRosary]} />
+            <Footer />
         </>
     )
 }
