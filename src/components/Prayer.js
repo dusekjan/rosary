@@ -23,7 +23,7 @@ function Prayer({prayer, mystery}) {
 
     let text;
     if (mystery && prayer === "hailMary") { // so hailMary
-        if (length === SHORT) { mystery = `\n...${mystery.slice(3, -3)}...` }
+        if (length === SHORT) { mystery = `\n\n...${mystery.slice(3, -3)}...` }
         text = data[key].hailMary1 + mystery + data[key].hailMary2
     } else if (mystery && (prayer === "mystery" || "mysteryFirst") ) {  // so "showSecrets" option
         text = mystery

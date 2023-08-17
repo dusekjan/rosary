@@ -21,30 +21,30 @@
   "luminous": {
     "title": "Růženec světla",
     "adjective": "světla",
-    "mysteries": [",\n\nkterý byl pokřtěn v Jordánu.\n\n", ",\n\nkterý zjevil v Káně svou božskou moc.\n\n", ",\n\nkterý hlásal Boží království a vyzýval k pokání.\n\n", ",\n\nkterý na hoře proměnění zjevil svou slávu.\n\n", ",\n\nkterý ustanovil Eucharistii.\n\n"]
+    "mysteries": [",\n\nkterý byl pokřtěn v Jordánu.\n\n", ",\n\nkterý zjevil v Káně svou božskou moc.\n\n", ",\n\nkterý hlásal Boží království a vyzýval k pokání.\n\n", ",\n\nkterý na hoře Proměnění zjevil svou slávu.\n\n", ",\n\nkterý ustanovil Eucharistii.\n\n"]
   },
   "prayers": {
     "signOfTheCrossFirst": "Ve jménu Otce i Syna i Ducha svatého.\nAmen.",
     "signOfTheCrossSecond": "Ve jménu Otce i Syna i Ducha svatého.\nAmen.",
-    "apostlesCreed": "Věřím v Boha,\nOtce všemohoucího,\nStvořitele nebe i země,\ni v Ježíše Krista,\nSyna jeho Jediného,\nPána našeho;\njenž se počal z Ducha svatého,\nnarodil se z Marie Panny,\ntrpěl pod Ponciem Pilátem,\nukřižován umřel i pohřben jest;\nsestoupil do pekel,\ntřetího dne vstal z mrtvých;\nvstoupil na nebesa,\nsedí po pravici Boha,\nOtce všemohoucího;\nodtud přijde soudit živé i mrtvé.\n\nVěřím v Ducha Svatého, svatou církev obecnou, společenství svatých, odpuštění hříchů, vzkříšení těla a život věčný.\nAmen.",
+    "apostlesCreed": "Věřím v Boha,\nOtce všemohoucího, Stvořitele nebe i země.\nI v Ježíše Krista,\nSyna jeho jediného, Pána našeho;\njenž se počal z Ducha svatého,\nnarodil se z Marie Panny,\ntrpěl pod Ponciem Pilátem,\nukřižován umřel i pohřben jest;\nsestoupil do pekel,\ntřetího dne vstal z mrtvých;\nvstoupil na nebesa,\nsedí po pravici Boha, Otce všemohoucího;\nodtud přijde soudit živé i mrtvé.\nVěřím v Ducha Svatého,\nsvatou církev obecnou,\nspolečenství svatých,\nodpuštění hříchů,\nvzkříšení těla\na život věčný.\nAmen.",
     "ourFather": "Otče náš, jenž jsi na nebesích,\nposvěť se jméno tvé.\nPřijď království tvé.\nBuď vůle tvá jako v nebi, tak i na zemi.\nChléb náš vezdejší dej nám dnes.\nA odpusť nám naše viny,\njako i my odpouštíme našim viníkům.\nA neuveď nás v pokušení,\nale zbav nás od zlého.\nAmen.",
     "hailMary1": "Zdrávas, Maria, milosti plná,\nPán s tebou;\npožehnaná ty mezi ženami\na požehnaný plod života tvého, Ježíš",
     "hailMary2": "Svatá Maria, Matko Boží,\npros za nás hříšné\nnyní i v hodinu smrti naší.\nAmen.",
-    "gloryBe": "Sláva Otci i Synu i Duchu svatému,\njako byla na počátku, i nyní, i vždycky\na na věky věků.\nAmen.",
+    "gloryBe": "Sláva Otci i Synu i Duchu svatému,\njako byla na počátku, i nyní i vždycky\na na věky věků.\nAmen.",
     "fatimaPrayer": "Pane Ježíši, odpusť nám naše hříchy,\nuchraň nás pekelného ohně\na přiveď do nebe všechny duše,\nzvláště ty,\nkteré tvého milosrdenství nejvíce potřebují.\nAmen.",
     "hailHolyQueen": "Zdrávas, Královno, matko milosrdenství,\nživote, sladkosti a naděje naše, buď zdráva!\nK tobě voláme, vyhnaní synové Evy,\nk tobě vzdycháme, lkajíce a plačíce\nv tomto slzavém údolí.\nA proto, orodovnice naše,\nobrať k nám své milosrdné oči\na Ježíše, požehnaný plod života svého,\nnám po tomto putování ukaž,\nó milostivá,\nó přívětivá,\nó přesladká, Panno Maria!\nOroduj za nás, královno posvátného růžence,\naby nám Kristus dal účast na svých zaslíbeních.\n",
-    "rosaryPrayer": "(Modleme se) Bože, tvůj jednorozený Syn nám svým životem, smrtí a zmrtvýchvstáním získal věčnou spásu. Dej nám, prosíme, když v posvátném růženci blahoslavené Panny Marie o těchto tajemstvích rozjímáme, ať také podle nich žijeme a dosáhneme toho, co slibují. Skrze Krista, našeho Pána.\nAmen."
+    "rosaryPrayer": "Modleme se: Bože, tvůj jednorozený Syn nám svým životem, smrtí a zmrtvýchvstáním získal věčnou spásu. Dej nám, prosíme, když v posvátném růženci blahoslavené Panny Marie o těchto tajemstvích rozjímáme, ať také podle nich žijeme a dosáhneme toho, co slibují. Skrze Krista, našeho Pána.\nAmen."
   },
     "prayersShort": {
     "signOfTheCrossFirst": "Ve jménu Otce i Syna i Ducha svatého.\nAmen.",
     "signOfTheCrossSecond": "Ve jménu Otce i Syna i Ducha svatého.\nAmen.",
-    "apostlesCreed": "Věřím v Boha,\nOtce všemohoucího...",
+    "apostlesCreed": "Věřím v Boha, Otce všemohoucího...",
     "ourFather": "Otče náš...",
     "hailMary1": "Zdrávas, Maria...",
     "hailMary2": "",
     "gloryBe": "Sláva Otci i Synu i Duchu svatému...",
     "fatimaPrayer": "Pane Ježíši, odpusť nám naše hříchy,\nuchraň nás pekelného ohně\na přiveď do nebe všechny duše,\nzvláště ty,\nkteré tvého milosrdenství nejvíce potřebují.\nAmen.",
     "hailHolyQueen": "Zdrávas, Královno, matko milosrdenství,\nživote, sladkosti a naděje naše, buď zdráva!\nK tobě voláme, vyhnaní synové Evy,\nk tobě vzdycháme, lkajíce a plačíce\nv tomto slzavém údolí.\nA proto, orodovnice naše,\nobrať k nám své milosrdné oči\na Ježíše, požehnaný plod života svého,\nnám po tomto putování ukaž,\nó milostivá,\nó přívětivá,\nó přesladká, Panno Maria!\nOroduj za nás, královno posvátného růžence,\naby nám Kristus dal účast na svých zaslíbeních.\n",
-    "rosaryPrayer": "(Modleme se) Bože, tvůj jednorozený Syn nám svým životem, smrtí a zmrtvýchvstáním získal věčnou spásu. Dej nám, prosíme, když v posvátném růženci blahoslavené Panny Marie o těchto tajemstvích rozjímáme, ať také podle nich žijeme a dosáhneme toho, co slibují. Skrze Krista, našeho Pána.\nAmen."
+    "rosaryPrayer": "Modleme se: Bože, tvůj jednorozený Syn nám svým životem, smrtí a zmrtvýchvstáním získal věčnou spásu. Dej nám, prosíme, když v posvátném růženci blahoslavené Panny Marie o těchto tajemstvích rozjímáme, ať také podle nich žijeme a dosáhneme toho, co slibují. Skrze Krista, našeho Pána.\nAmen."
   }
 }
