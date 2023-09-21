@@ -5,7 +5,7 @@ function Header() {
     return (
         <header>
             <h1><span>{data.rosary}</span></h1>
-            <a className="logo" href="https://www.eracz.cz/" target="_blank">ERA Česká republika<RxExternalLink /></a>
+            <a className="logo" href="https://www.eracz.cz/2023/09/21/ruzenec-online/" target="_blank">ERA Česká republika<RxExternalLink /></a>
         </header>
     );
 }
