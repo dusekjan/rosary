@@ -1,4 +1,5 @@
 import {useRef, useState} from "react";
+import { BsArrowDown, BsArrowUp } from "react-icons/bs"
 
 
 function ToolsAdvanced({ onChangeMode, autoScroll }) {
@@ -22,7 +23,7 @@ function ToolsAdvanced({ onChangeMode, autoScroll }) {
         onChangeMode(e)
     }
 
-    const icon = opened ? "\uD83E\uDC15" : "\uD83E\uDC17";
+    const icon = opened ? <BsArrowUp /> : <BsArrowDown />;
     return (
         <div className="advanced">
             <button onClick={handleClick}>{icon}&nbsp;ROZŠÍŘENÉ NASTAVENÍ&nbsp;{icon}</button>

@@ -734,6 +734,10 @@ body.light .advanced button {
 body.light .advanced button:hover {
   padding-bottom: 10px;
 }
+body.light .advanced button svg {
+  position: relative;
+  top: 2px;
+}
 body.light .mysteries .prayer:first-child .left,
 body.light main > .prayer:first-child .left {
   align-self: flex-start;
@@ -1591,6 +1595,10 @@ body.dark .advanced button {
 }
 body.dark .advanced button:hover {
   padding-bottom: 10px;
+}
+body.dark .advanced button svg {
+  position: relative;
+  top: 2px;
 }
 body.dark .mysteries .prayer:first-child .left,
 body.dark main > .prayer:first-child .left {
