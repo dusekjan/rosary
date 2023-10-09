@@ -5,7 +5,7 @@ import DoneCounterContext from "../context/doneCounter";
 
 function Prayer({prayer, mystery}) {
     const [done, setDone] = useState(false)
-    const { length, LONG, SHORT } = useContext(ModeContext)
+    const { length, autoScroll, LONG, SHORT, NOSCROLL } = useContext(ModeContext)
     const { counter, incrementCounter, decrementCounter } = useContext(DoneCounterContext)
     const prayerDiv = useRef();
 
@@ -60,14 +60,14 @@ function Prayer({prayer, mystery}) {
         setDone(newValue)
 
         const nextSibling = prayerDiv.current && prayerDiv.current.nextElementSibling
-        if (!nextSibling || newValue === false || !CSS.supports("scroll-behavior", "smooth")){
+        if (!nextSibling || newValue === false || autoScroll === NOSCROLL || !CSS.supports("scroll-behavior", "smooth")){
             return
         }
 
         if (nextSibling.classList.contains("prayer")){
-            nextSibling.scrollIntoView({ behavior: "smooth"})
+            nextSibling.scrollIntoView({ behavior: "smooth", block: autoScroll})
         } else if (nextSibling.classList.contains("decade")) {
-            nextSibling.querySelector(".prayer").scrollIntoView({ behavior: "smooth"})
+            nextSibling.querySelector(".prayer").scrollIntoView({ behavior: "smooth", block: autoScroll})
         }
     }
 

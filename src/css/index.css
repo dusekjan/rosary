@@ -251,10 +251,14 @@ body.light .info button:hover {
 }
 body.light label *,
 body.light label *:before,
-body.light label *:after {
+body.light label *:after,
+body.light .label *,
+body.light .label *:before,
+body.light .label *:after {
   box-sizing: initial;
 }
-body.light label {
+body.light label,
+body.light .label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -267,19 +271,23 @@ body.light label {
   transition: border-bottom-color 0.3s ease;
 }
 @media (max-width: 700px) {
-  body.light label {
+  body.light label,
+  body.light .label {
     justify-content: space-between;
     width: 90%;
     max-width: 340px;
   }
 }
-body.light label.disabled {
+body.light label.disabled,
+body.light .label.disabled {
   border-bottom-color: #CCC;
 }
-body.light label span {
+body.light label span,
+body.light .label span {
   margin-right: 16px;
 }
-body.light label .switch {
+body.light label .switch,
+body.light .label .switch {
   border: 2px solid #FFAC26;
   background-color: #FFAC26;
   position: relative;
@@ -288,15 +296,19 @@ body.light label .switch {
   overflow: hidden;
   border-radius: 100px;
 }
-body.light label .switch.disabled {
+body.light label .switch.disabled,
+body.light .label .switch.disabled {
   border: 2px solid #CCC;
   background-color: #CCC;
 }
-body.light label .switch.disabled .knobs:before {
+body.light label .switch.disabled .knobs:before,
+body.light .label .switch.disabled .knobs:before {
   color: #FFFFFF;
 }
 body.light label .switch .layer,
-body.light label .switch .knobs {
+body.light .label .switch .layer,
+body.light label .switch .knobs,
+body.light .label .switch .knobs {
   position: absolute;
   top: 0;
   right: 0;
@@ -304,15 +316,18 @@ body.light label .switch .knobs {
   left: 0;
   transition: 0.3s ease all;
 }
-body.light label .switch .layer {
+body.light label .switch .layer,
+body.light .label .switch .layer {
   width: 100%;
   background-color: #FFAC26;
   z-index: 1;
 }
-body.light label .switch .knobs {
+body.light label .switch .knobs,
+body.light .label .switch .knobs {
   z-index: 2;
 }
-body.light label .switch .knobs:before {
+body.light label .switch .knobs:before,
+body.light .label .switch .knobs:before {
   content: "ANO";
   position: absolute;
   top: 4px;
@@ -329,7 +344,8 @@ body.light label .switch .knobs:before {
   border-radius: 50%;
   transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
 }
-body.light label .switch .checkbox {
+body.light label .switch .checkbox,
+body.light .label .switch .checkbox {
   position: relative;
   width: 100%;
   height: 100%;
@@ -339,19 +355,23 @@ body.light label .switch .checkbox {
   cursor: pointer;
   z-index: 3;
 }
-body.light label .switch .checkbox:checked + .knobs:before {
+body.light label .switch .checkbox:checked + .knobs:before,
+body.light .label .switch .checkbox:checked + .knobs:before {
   content: "NE";
   left: 30px;
   background-color: #FFAC26;
   color: #FFFFFF;
 }
-body.light label .switch .checkbox:checked ~ .layer {
+body.light label .switch .checkbox:checked ~ .layer,
+body.light .label .switch .checkbox:checked ~ .layer {
   background-color: #FFFFFF;
 }
-body.light label .switch .checkbox:disabled + .knobs:before {
+body.light label .switch .checkbox:disabled + .knobs:before,
+body.light .label .switch .checkbox:disabled + .knobs:before {
   background-color: #4D4D4D;
 }
-body.light label .switch .checkbox:disabled ~ .layer {
+body.light label .switch .checkbox:disabled ~ .layer,
+body.light .label .switch .checkbox:disabled ~ .layer {
   background-color: #CCC;
 }
 body.light header h1 {
@@ -650,6 +670,70 @@ body.light .tools {
     align-items: center;
   }
 }
+body.light .advanced {
+  margin: auto;
+  text-align: center;
+}
+body.light .advanced .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease-out;
+}
+body.light .advanced .content .label {
+  width: 320px;
+  max-width: 90%;
+  justify-content: space-between;
+  text-align: left;
+}
+body.light .advanced .content .label.select {
+  height: 84px;
+}
+body.light .advanced .content .label.select select {
+  cursor: pointer;
+  color: #000;
+  background-color: #FFFFFF;
+  background-image: url("../images/select-arrow-down.png");
+  background-position: right 6px center;
+  background-repeat: no-repeat;
+  background-size: auto 50%;
+  border-radius: 2px;
+  border: 1px solid #FFAC26;
+  padding: 10px 22px 10px 6px;
+  transition: background-color 300ms;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+body.light .advanced .content .label.select select::-ms-expand {
+  display: none;
+}
+body.light .advanced .content .label.select select:hover,
+body.light .advanced .content .label.select select:focus {
+  background-color: #F9F9F9;
+}
+body.light .advanced .content .label.select select:focus {
+  background-image: url("../images/select-arrow-up.png");
+}
+body.light .advanced button {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  height: 40px;
+  margin-top: 8px;
+  padding: 4px 6px;
+  background-color: transparent;
+  border-style: none;
+  border-bottom: 2px #B2B2B2 solid;
+  transition: 300ms padding-bottom;
+}
+body.light .advanced button:hover {
+  padding-bottom: 10px;
+}
 body.light .mysteries .prayer:first-child .left,
 body.light main > .prayer:first-child .left {
   align-self: flex-start;
@@ -718,7 +802,6 @@ body.light .prayer .right p.apostlesCreed {
 @media (min-width: 501px) and (min-height: 500px) {
   body.light .prayer .right p:hover {
     background-color: #FFFFFF !important;
-    border-color: #B2B2B2 !important;
     color: #CCC !important;
   }
 }
@@ -1026,10 +1109,14 @@ body.dark .info button:hover {
 }
 body.dark label *,
 body.dark label *:before,
-body.dark label *:after {
+body.dark label *:after,
+body.dark .label *,
+body.dark .label *:before,
+body.dark .label *:after {
   box-sizing: initial;
 }
-body.dark label {
+body.dark label,
+body.dark .label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1042,19 +1129,23 @@ body.dark label {
   transition: border-bottom-color 0.3s ease;
 }
 @media (max-width: 700px) {
-  body.dark label {
+  body.dark label,
+  body.dark .label {
     justify-content: space-between;
     width: 90%;
     max-width: 340px;
   }
 }
-body.dark label.disabled {
+body.dark label.disabled,
+body.dark .label.disabled {
   border-bottom-color: #4D4D4D;
 }
-body.dark label span {
+body.dark label span,
+body.dark .label span {
   margin-right: 16px;
 }
-body.dark label .switch {
+body.dark label .switch,
+body.dark .label .switch {
   border: 2px solid #dea447;
   background-color: #dea447;
   position: relative;
@@ -1063,15 +1154,19 @@ body.dark label .switch {
   overflow: hidden;
   border-radius: 100px;
 }
-body.dark label .switch.disabled {
+body.dark label .switch.disabled,
+body.dark .label .switch.disabled {
   border: 2px solid #4D4D4D;
   background-color: #4D4D4D;
 }
-body.dark label .switch.disabled .knobs:before {
+body.dark label .switch.disabled .knobs:before,
+body.dark .label .switch.disabled .knobs:before {
   color: #121212;
 }
 body.dark label .switch .layer,
-body.dark label .switch .knobs {
+body.dark .label .switch .layer,
+body.dark label .switch .knobs,
+body.dark .label .switch .knobs {
   position: absolute;
   top: 0;
   right: 0;
@@ -1079,15 +1174,18 @@ body.dark label .switch .knobs {
   left: 0;
   transition: 0.3s ease all;
 }
-body.dark label .switch .layer {
+body.dark label .switch .layer,
+body.dark .label .switch .layer {
   width: 100%;
   background-color: #dea447;
   z-index: 1;
 }
-body.dark label .switch .knobs {
+body.dark label .switch .knobs,
+body.dark .label .switch .knobs {
   z-index: 2;
 }
-body.dark label .switch .knobs:before {
+body.dark label .switch .knobs:before,
+body.dark .label .switch .knobs:before {
   content: "ANO";
   position: absolute;
   top: 4px;
@@ -1104,7 +1202,8 @@ body.dark label .switch .knobs:before {
   border-radius: 50%;
   transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
 }
-body.dark label .switch .checkbox {
+body.dark label .switch .checkbox,
+body.dark .label .switch .checkbox {
   position: relative;
   width: 100%;
   height: 100%;
@@ -1114,19 +1213,23 @@ body.dark label .switch .checkbox {
   cursor: pointer;
   z-index: 3;
 }
-body.dark label .switch .checkbox:checked + .knobs:before {
+body.dark label .switch .checkbox:checked + .knobs:before,
+body.dark .label .switch .checkbox:checked + .knobs:before {
   content: "NE";
   left: 30px;
   background-color: #dea447;
   color: #121212;
 }
-body.dark label .switch .checkbox:checked ~ .layer {
+body.dark label .switch .checkbox:checked ~ .layer,
+body.dark .label .switch .checkbox:checked ~ .layer {
   background-color: #121212;
 }
-body.dark label .switch .checkbox:disabled + .knobs:before {
+body.dark label .switch .checkbox:disabled + .knobs:before,
+body.dark .label .switch .checkbox:disabled + .knobs:before {
   background-color: #CCC;
 }
-body.dark label .switch .checkbox:disabled ~ .layer {
+body.dark label .switch .checkbox:disabled ~ .layer,
+body.dark .label .switch .checkbox:disabled ~ .layer {
   background-color: #4D4D4D;
 }
 body.dark header h1 {
@@ -1425,6 +1528,70 @@ body.dark .tools {
     align-items: center;
   }
 }
+body.dark .advanced {
+  margin: auto;
+  text-align: center;
+}
+body.dark .advanced .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease-out;
+}
+body.dark .advanced .content .label {
+  width: 320px;
+  max-width: 90%;
+  justify-content: space-between;
+  text-align: left;
+}
+body.dark .advanced .content .label.select {
+  height: 84px;
+}
+body.dark .advanced .content .label.select select {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #121212;
+  background-image: url("../images/select-arrow-down.png");
+  background-position: right 6px center;
+  background-repeat: no-repeat;
+  background-size: auto 50%;
+  border-radius: 2px;
+  border: 1px solid #dea447;
+  padding: 10px 22px 10px 6px;
+  transition: background-color 300ms;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+body.dark .advanced .content .label.select select::-ms-expand {
+  display: none;
+}
+body.dark .advanced .content .label.select select:hover,
+body.dark .advanced .content .label.select select:focus {
+  background-color: #2d2d2d;
+}
+body.dark .advanced .content .label.select select:focus {
+  background-image: url("../images/select-arrow-up.png");
+}
+body.dark .advanced button {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.87);
+  height: 40px;
+  margin-top: 8px;
+  padding: 4px 6px;
+  background-color: transparent;
+  border-style: none;
+  border-bottom: 2px #7f7f7f solid;
+  transition: 300ms padding-bottom;
+}
+body.dark .advanced button:hover {
+  padding-bottom: 10px;
+}
 body.dark .mysteries .prayer:first-child .left,
 body.dark main > .prayer:first-child .left {
   align-self: flex-start;
@@ -1493,7 +1660,6 @@ body.dark .prayer .right p.apostlesCreed {
 @media (min-width: 501px) and (min-height: 500px) {
   body.dark .prayer .right p:hover {
     background-color: #121212 !important;
-    border-color: #7f7f7f !important;
     color: #4D4D4D !important;
   }
 }

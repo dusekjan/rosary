@@ -22,11 +22,16 @@ button {
   }
 }
 
-label *, label *:before, label *:after {
+label *,
+label *:before,
+label *:after,
+.label *,
+.label *:before,
+.label *:after {
   box-sizing: initial;
 }
 
-label {
+label, .label {
   display: flex;
   justify-content: center;
   align-items: center;
