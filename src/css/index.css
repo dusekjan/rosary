@@ -1785,7 +1785,7 @@ body.dark .decade.indexes .prayer p.hailMary::after {
   right: 6px;
   font-style: normal;
   font-size: 14px;
-  color: #CCC;
+  color: #1a1a1a;
 }
 body.dark .decade.indexes .prayer.grey p.hailMary::after {
   color: #4D4D4D;
