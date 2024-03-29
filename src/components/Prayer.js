@@ -54,13 +54,24 @@ function Prayer({prayer, mystery}) {
             shape = "circle"
     }
 
-    const handleClickDone = (e) => {
-        const newValue = !done
-        newValue ? incrementCounter() : decrementCounter()
-        setDone(newValue)
+    const onClickDone = (e) => {
+        let newValue = toggleDone()
 
-        const nextSibling = prayerDiv.current && prayerDiv.current.nextElementSibling
-        if (!nextSibling || newValue === false || autoScroll === NOSCROLL || !CSS.supports("scroll-behavior", "smooth")){
+        if (!prayerDiv.current || newValue === false ) { return }
+        moveToNext(prayerDiv.current)
+    }
+
+    const toggleDone = () => {
+        const newValue = !prayerDiv.current.classList.contains("grey");
+        newValue ? incrementCounter() : decrementCounter()
+        prayerDiv.current.classList.toggle("grey")
+        setDone(newValue)  // pokud měníme stav nastaven klávesnici, tak se zde nic nestane (měníme false => false)
+        return newValue
+    }
+
+    const moveToNext = (current) => {
+        let nextSibling = current.nextElementSibling || current.parentElement.nextElementSibling;
+        if (!nextSibling || autoScroll === NOSCROLL || !CSS.supports("scroll-behavior", "smooth")){
             return
         }
 
@@ -72,13 +83,13 @@ function Prayer({prayer, mystery}) {
     }
 
     return (
-        <div className={`prayer ${done ? "grey" : ""}`} ref={prayerDiv}>
+        <div className="prayer" ref={prayerDiv}>
             <div className="left">
                 <span className={shape}></span>
             </div>
             <div
                 className="right"
-                onClick={handleClickDone}>
+                onClick={onClickDone}>
                 <p className={prayer + " " + length}>
                     {text}
                 </p>

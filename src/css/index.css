@@ -1,3 +1,9 @@
+:root:has(> body.light) {
+  color-scheme: light;
+}
+:root:has(> body.dark) {
+  color-scheme: dark;
+}
 body.light {
   /* <body> */
   margin: 0;
@@ -227,6 +233,10 @@ body.light main {
   max-width: 560px;
   text-align: center;
   color: #000;
+}
+body.light main.error {
+  margin-top: 24px;
+  line-height: 24px;
 }
 body.light section {
   height: 540px;
@@ -650,11 +660,17 @@ body.light .info span {
   justify-content: center;
   align-items: center;
 }
+body.light .info span + span {
+  line-height: initial;
+}
+body.light .info span + span svg {
+  margin: 0 4px;
+}
 body.light .info svg {
   transition: color 300ms ease-out;
-  margin-right: 8px;
-  height: 20px;
-  width: 20px;
+  margin-right: 6px;
+  height: 22px;
+  width: 22px;
 }
 body.light .tools {
   display: flex;
@@ -682,15 +698,18 @@ body.light .advanced .content {
   overflow: hidden;
   transition: max-height 300ms ease-out;
 }
+body.light .advanced .content label,
 body.light .advanced .content .label {
   width: 320px;
   max-width: 90%;
   justify-content: space-between;
   text-align: left;
 }
+body.light .advanced .content label.select,
 body.light .advanced .content .label.select {
   height: 84px;
 }
+body.light .advanced .content label.select select,
 body.light .advanced .content .label.select select {
   cursor: pointer;
   color: #000;
@@ -708,13 +727,17 @@ body.light .advanced .content .label.select select {
   -webkit-appearance: none;
   appearance: none;
 }
+body.light .advanced .content label.select select::-ms-expand,
 body.light .advanced .content .label.select select::-ms-expand {
   display: none;
 }
+body.light .advanced .content label.select select:hover,
 body.light .advanced .content .label.select select:hover,
+body.light .advanced .content label.select select:focus,
 body.light .advanced .content .label.select select:focus {
   background-color: #F9F9F9;
 }
+body.light .advanced .content label.select select:focus,
 body.light .advanced .content .label.select select:focus {
   background-image: url("../images/select-arrow-up.png");
 }
@@ -849,6 +872,25 @@ body.light .greyBox {
   background-color: #FFFFFF !important;
   border-color: #B2B2B2 !important;
   color: #CCC !important;
+}
+body.light .decade.indexes {
+  counter-reset: indexes;
+}
+body.light .decade.indexes .prayer p.hailMary {
+  position: relative;
+  counter-increment: indexes;
+}
+body.light .decade.indexes .prayer p.hailMary::after {
+  content: counter(indexes) ".";
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  font-style: normal;
+  font-size: 14px;
+  color: #4D4D4D;
+}
+body.light .decade.indexes .prayer.grey p.hailMary::after {
+  color: #CCC;
 }
 body.light footer {
   text-align: center;
@@ -1089,6 +1131,10 @@ body.dark main {
   max-width: 560px;
   text-align: center;
   color: #000;
+}
+body.dark main.error {
+  margin-top: 24px;
+  line-height: 24px;
 }
 body.dark section {
   height: 540px;
@@ -1512,11 +1558,17 @@ body.dark .info span {
   justify-content: center;
   align-items: center;
 }
+body.dark .info span + span {
+  line-height: initial;
+}
+body.dark .info span + span svg {
+  margin: 0 4px;
+}
 body.dark .info svg {
   transition: color 300ms ease-out;
-  margin-right: 8px;
-  height: 20px;
-  width: 20px;
+  margin-right: 6px;
+  height: 22px;
+  width: 22px;
 }
 body.dark .tools {
   display: flex;
@@ -1544,15 +1596,18 @@ body.dark .advanced .content {
   overflow: hidden;
   transition: max-height 300ms ease-out;
 }
+body.dark .advanced .content label,
 body.dark .advanced .content .label {
   width: 320px;
   max-width: 90%;
   justify-content: space-between;
   text-align: left;
 }
+body.dark .advanced .content label.select,
 body.dark .advanced .content .label.select {
   height: 84px;
 }
+body.dark .advanced .content label.select select,
 body.dark .advanced .content .label.select select {
   cursor: pointer;
   color: rgba(255, 255, 255, 0.87);
@@ -1570,13 +1625,17 @@ body.dark .advanced .content .label.select select {
   -webkit-appearance: none;
   appearance: none;
 }
+body.dark .advanced .content label.select select::-ms-expand,
 body.dark .advanced .content .label.select select::-ms-expand {
   display: none;
 }
+body.dark .advanced .content label.select select:hover,
 body.dark .advanced .content .label.select select:hover,
+body.dark .advanced .content label.select select:focus,
 body.dark .advanced .content .label.select select:focus {
   background-color: #2d2d2d;
 }
+body.dark .advanced .content label.select select:focus,
 body.dark .advanced .content .label.select select:focus {
   background-image: url("../images/select-arrow-up.png");
 }
@@ -1711,6 +1770,25 @@ body.dark .greyBox {
   background-color: #121212 !important;
   border-color: #7f7f7f !important;
   color: #4D4D4D !important;
+}
+body.dark .decade.indexes {
+  counter-reset: indexes;
+}
+body.dark .decade.indexes .prayer p.hailMary {
+  position: relative;
+  counter-increment: indexes;
+}
+body.dark .decade.indexes .prayer p.hailMary::after {
+  content: counter(indexes) ".";
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  font-style: normal;
+  font-size: 14px;
+  color: #CCC;
+}
+body.dark .decade.indexes .prayer.grey p.hailMary::after {
+  color: #4D4D4D;
 }
 body.dark footer {
   text-align: center;

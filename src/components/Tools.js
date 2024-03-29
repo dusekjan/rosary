@@ -9,18 +9,20 @@ function Tools() {
         secrets,
         nightMode,
         autoScroll,
+        withIndex,
         setAndSaveMode,
         LONG,
         SHORT,
         SECRETS,
         NOSECRETS,
         NIGHTMODE,
-        NONIGHTMODE} = useContext(ModeContext)
+        NONIGHTMODE,
+        WITHINDEX,
+        NOINDEX } = useContext(ModeContext)
     const { counter, setCounter } = useContext(DoneCounterContext)
 
     const handleChangeMode = (e) => {
         const checked = e.target.checked
-
         switch (e.target.dataset.purpose) {
             case "length":
                 setAndSaveMode(!checked ? SHORT : LONG)
@@ -34,6 +36,9 @@ function Tools() {
             break;
             case "autoScroll":
                 setAndSaveMode(e.target.value);
+            break;
+            case "withIndex":
+                setAndSaveMode(!checked ? WITHINDEX : NOINDEX);
             break;
         }
     }
@@ -83,7 +88,11 @@ function Tools() {
                     </div>
                 </label>
             </div>
-            <ToolsAdvanced onChangeMode={handleChangeMode} autoScroll={autoScroll} />
+            <ToolsAdvanced
+                onChangeMode={handleChangeMode}
+                autoScroll={autoScroll}
+                withIndexChecked={withIndex !== WITHINDEX}
+            />
         </>
     );
 }

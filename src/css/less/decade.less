@@ -1,0 +1,25 @@
+
+.decade.indexes {
+  counter-reset: indexes;
+
+  .prayer  {
+    p.hailMary {
+      position: relative;
+      counter-increment: indexes;
+
+      &::after {
+        content: counter(indexes) + ".";
+        position: absolute;
+        top: 2px;
+        right: 6px;
+        font-style: normal;
+        font-size: 14px;
+        color: @grey-2;
+      }
+    }
+
+    &.grey p.hailMary::after {
+      color: @grey-3;
+    }
+  }
+}

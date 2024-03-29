@@ -15,21 +15,27 @@ function ModeProvider({ children }) {
   const CENTERSCROLL = "center"
   const BOTTOMSCROLL = "end"
 
+  const WITHINDEX = "withindex"
+  const NOINDEX = "noindex"
+
   const [length, setLength] = useState(LONG);
   const [secrets, setSecrets] = useState(NOSECRETS);
   const [nightMode, setNightMode] = useState(NONIGHTMODE)
   const [autoScroll, setAutoScroll] = useState(CENTERSCROLL)
+  const [withIndex, setWithIndex] = useState(WITHINDEX)
 
   useEffect(() => {
     const savedLength = localStorage.getItem("length");
     const savedSecrets = localStorage.getItem("secrets");
     const savedNightMode = localStorage.getItem("nightMode");
     const savedAutoScroll = localStorage.getItem("autoScroll");
+    const savedWithIndex = localStorage.getItem("withIndex");
 
     [LONG, SHORT].includes(savedLength) && setLength(savedLength);
     [SECRETS, NOSECRETS].includes(savedSecrets) && setSecrets(savedSecrets);
     [NIGHTMODE, NONIGHTMODE].includes(savedNightMode) && setNightMode(savedNightMode);
     [NOSCROLL, STARTSCROLL, CENTERSCROLL, BOTTOMSCROLL].includes(savedAutoScroll) && setAutoScroll(savedAutoScroll);
+    [NOINDEX, WITHINDEX].includes(savedWithIndex) && setWithIndex(savedWithIndex);
   }, [])
 
   const setAndSaveMode = (value) => {
@@ -45,6 +51,9 @@ function ModeProvider({ children }) {
     } else if ([NOSCROLL, STARTSCROLL, CENTERSCROLL, BOTTOMSCROLL].includes(value)) {
       localStorage.setItem("autoScroll", value)
       setAutoScroll(value)
+    } else if ([NOINDEX, WITHINDEX].includes(value)) {
+      localStorage.setItem("withIndex", value)
+      setWithIndex(value)
     }
   }
 
@@ -53,6 +62,7 @@ function ModeProvider({ children }) {
     secrets,
     nightMode,
     autoScroll,
+    withIndex,
     setAndSaveMode,
     LONG,
     SHORT,
@@ -60,7 +70,9 @@ function ModeProvider({ children }) {
     NOSECRETS,
     NIGHTMODE,
     NONIGHTMODE,
-    NOSCROLL
+    NOSCROLL,
+    WITHINDEX,
+    NOINDEX
   };
 
   return (

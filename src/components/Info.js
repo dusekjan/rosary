@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
-import { BsInfoSquare } from "react-icons/bs"
+import { BsInfoCircle } from "react-icons/bs"
+import { TbSquareLetterN, TbSquareArrowRight } from "react-icons/tb"
 import DoneCounterContext from "../context/doneCounter";
 
 function Info() {
@@ -16,8 +17,13 @@ function Info() {
         <div className="info">
             {
                 counter === 0
-                ? <span><BsInfoSquare />klikněte na odmodlenou část</span>
-                : <span><button onClick={handleClick}>ZAČÍT ZNOVU</button></span>
+                ? <>
+                    <span><BsInfoCircle />klikněte na odmodlenou část</span>
+                    <span>nebo stiskněte klávesu <TbSquareLetterN /> či <TbSquareArrowRight /></span>
+                  </>
+                : <span>
+                        <button onClick={handleClick}>ZAČÍT ZNOVU</button>
+                  </span>
             }
         </div>
     );
